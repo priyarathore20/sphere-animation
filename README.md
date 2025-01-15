@@ -1,6 +1,6 @@
-# 3D Particle App 🚀✨
+# 3D Sphere Animation 🚀✨
 
-Welcome to my 3D Particle App! 🎉
+Welcome to my 3D sphere-animation App! 🎉
 
 This project is a journey from "npx create-react-app" to a fully interactive 3D sphere with particles that move, spin, and vibe like they're at a party. The magic happens with React, @react-three/fiber, and GSAP.
 
