@@ -109,26 +109,34 @@ const SphereVideo = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100vw',
-        height: '100vh',
+        height: '100vh', // Full viewport height
+        width: '100vw', // Full viewport width
+        overflow: 'hidden', // Prevent scrollbars
       }}
     >
-      <Canvas
-        camera={{
-          position: [0, 0, 300], // Fixed camera position
-          fov: 75, // Set the field of view
-          aspect: 1, // Ensure the aspect ratio is 1 (square view)
-          near: 0.1,
-          far: 1000,
-        }}
+      <div
         style={{
-          height: '500px', // Set the height of the canvas
-          width: '500px', // Set the width equal to the height to maintain a square canvas
-          display: 'block', // Prevent any unintended space or margin
+          position: 'relative',
+          width: '100%',
+          maxWidth: '500px', // Limit max width for larger screens
+          aspectRatio: '1', // Maintain a square aspect ratio (1:1)
         }}
       >
-        <Particles />
-      </Canvas>
+        <Canvas
+          camera={{
+            position: [0, 0, 300], // Fixed camera position
+            fov: 75, // Set the field of view
+            near: 0.1,
+            far: 1000,
+          }}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+        >
+          <Particles />
+        </Canvas>
+      </div>
     </div>
   );
 };
